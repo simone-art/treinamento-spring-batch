@@ -70,8 +70,8 @@ public class BatchConfiguration {
     //Código que define o Job que vai ser construido através dos passos definidos
     //Cada passo pode envolver um reader, a processor e writer.
     @Bean
-    public Job importUserJob(JobCompletionNotificationListener listener, Step step1) {
-        return jobBuilderFactory.get("importUserJob")
+    public Job importPersonJob(JobCompletionNotificationListener listener, Step step1) {
+        return jobBuilderFactory.get("importPersonJob")
                 .incrementer(new RunIdIncrementer())
                 .listener(listener)
                 .flow(step1)
