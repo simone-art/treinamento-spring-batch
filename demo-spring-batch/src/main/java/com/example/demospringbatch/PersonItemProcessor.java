@@ -15,10 +15,10 @@ public abstract class PersonItemProcessor implements ItemProcessor<Person, Perso
         //Os valores das variáveis vao ser transformadas em maiúsculas
         // pra ver as mudanças dos objetos
 
-        final String name = person.getFirstName().toUpperCase();
+        final String firstName = person.getFirstName().toUpperCase();
         final String lastName = person.getLastName().toUpperCase();
 
-        final Person transformedPerson = new Person(name, lastName);
+        final Person transformedPerson = new Person(firstName, lastName);
 
         log.info("Convertendo (" + person + ") em (" + transformedPerson + ")");
 
