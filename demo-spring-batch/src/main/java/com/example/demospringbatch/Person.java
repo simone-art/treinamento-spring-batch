@@ -32,7 +32,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name: " + name + ", lastName: " + lastName;
+        return "Person [Name=" + name + ", lastName=" + lastName +"]";
     }
 
 }
