@@ -1,7 +1,7 @@
 package com.example.demospringbatch;
 
 public class Person {
-    private String name;
+    private String firstName;
     private String lastName;
 
     //Constructor vazio
@@ -9,17 +9,17 @@ public class Person {
     }
 
     //Constructor com todos os parámetros
-    public Person(String name, String lastName) {
-        this.name = name;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -32,7 +32,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person [Name=" + name + ", lastName=" + lastName +"]";
+        return "Person [Name=" + firstName + ", lastName=" + lastName +"]";
     }
 
 }
