@@ -49,12 +49,7 @@ public class BatchConfiguration {
     //Código que processa o batch
     @Bean
     public PersonItemProcessor processor() {
-        return new PersonItemProcessor() {
-            @Override
-            public Person process(Person person) throws Exception {
-                return null;
-            }
-        };
+        return new PersonItemProcessor();
     }
 
     //Código que executará o script e insertará os dados dos nomes e sobrenomes
