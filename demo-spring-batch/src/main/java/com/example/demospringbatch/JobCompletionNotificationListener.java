@@ -25,9 +25,9 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     @Override
     public void afterJob(JobExecution jobExecution) {
         if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
-            log.info("!!! JOB FINISHED! Time to verify the results");
+            log.info("!!! JOB FINALIZADO! Verifica os resultados");
 
-            jdbcTemplate.query("SELECT first_name, last_name FROM people",
+            jdbcTemplate.query("SELECT name, last_name FROM people",
                     (rs, row) -> new Person(
                             rs.getString(1),
                             rs.getString(2))
